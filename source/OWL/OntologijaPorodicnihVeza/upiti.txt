@@ -1,0 +1,25 @@
+1. Majka and (Razvedena or Udovica)
+2. Tetka and SrednjeDoba and Samica
+3. SrednjeDoba and Samac
+4. Snaja and (imaMuza some (Osoba and (imaRoditelja some Majka) and (imaRoditelja some Maceha)))
+5. Deda and (brojBivshihBrakova some int[>= 3]) and (imaZenu some Osoba)
+   Deda and (brojBivshihBrakova some int[>= 3]) and Ozenjen
+   Deda and (brojBivshihBrakova some int[>= 3]) and (uBraku value true)
+
+Dete razvedenih roditelja
+6. Dete and ((imaRoditelja some Razvedena) or (imaRoditelja some Razveden))
+
+Osoba koja ima brata ili sestru od tetke
+7. Osoba and (imaRoditelja some (Osoba and (imaSestru some (Osoba and (imaDete some Osoba)))))
+
+Osoba koja ima brata ili sestru od ujaka
+7'. Osoba and (imaRoditelja some (Osoba and (imaBrata some (Osoba and (imaDete some Osoba)))))
+
+osoba ciji brat ili sestra imaju potomke
+8. Osoba and (imaBrata some (Osoba and (imaDete some Osoba)) or imaSestru some (Osoba and (imaDete some Osoba)))
+
+Ziv pradeda
+9. Pradeda and (jeZiv value true)
+
+Dever koji ima mladu zenu
+10. Dever and Ozenjen and (imaZenu some (Osoba and MladalackoDoba))

@@ -1,0 +1,2513 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#hasSibling -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#hasSibling">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:comment>ima brata ili sestru</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBivsegMuza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBivsegMuza">
+        <rdfs:comment>ima bivseg muza (moze ih biti vise)</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBivsuZenu"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBivsemBrakuSa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBivsuZenu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBivsuZenu">
+        <rdfs:comment>ima bivsu zenu (moze ih biti vise)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBivsemBrakuSa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBrata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBrata">
+        <rdfs:comment>ima brata</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#hasSibling"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete">
+        <rdfs:comment>ima dete</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaKcer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaKcer">
+        <rdfs:comment>ima kcer</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMacehu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMacehu">
+        <rdfs:comment>ima macehu</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMajku -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMajku">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>ima majku</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>ima muza</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBrakuSa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaOca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaOca">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>ima oca</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaOcuha -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaOcuha">
+        <rdfs:comment>ima ocuha</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPastorka -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPastorka">
+        <rdfs:comment>ima sina očuhove žene ili maćehinog muža iz prethodnog braka ili veze</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPastorku -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPastorku">
+        <rdfs:comment>ima kćerku očuhove žene ili maćehinog muža iz prethodnog braka ili veze</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPolubrata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPolubrata">
+        <rdfs:comment>ima polubrata</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#hasSibling"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPolusestru -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPolusestru">
+        <rdfs:comment>ima polusestru</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#hasSibling"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja">
+        <rdfs:comment>ima roditelja</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSestru -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSestru">
+        <rdfs:comment>ima sestru</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#hasSibling"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSina -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSina">
+        <rdfs:comment>ima sina</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>ima zenu</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBrakuSa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>kog je pola</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeStarosti -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeStarosti">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>koje je starosti</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Starost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBivsemBrakuSa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBivsemBrakuSa">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:comment>da li je osaba imala vise od jednog braka</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBrakuSa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBrakuSa">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:comment>Da li je u braku</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojBivshihBrakova -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojBivshihBrakova">
+        <rdfs:comment>koliko je brakova osoba imala</rdfs:comment>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojBivshihBrakova"/>
+                <owl:someValuesFrom rdf:resource="&xsd;nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>broj godina osobe</rdfs:comment>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina"/>
+                <owl:someValuesFrom rdf:resource="&xsd;nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>da li osoba ziva</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBraku -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBraku">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>da li je osoba trenutno u braku</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Baba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Baba">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Majka"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Roditelj"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Baba - Roditelj oca ili majke</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus">
+        <rdfs:comment>Opisuje kakvog je osoba bracnog statusa</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Brat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Brat">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sibling"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sestra"/>
+        <rdfs:comment>Brat – Sin istih roditelja u odnosu na drugu decu tih roditelja</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Cerka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Cerka">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dete"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sin"/>
+        <rdfs:comment>Ćerka - Žensko dete roditelja</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#DecijeDoba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#DecijeDoba">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="&xsd;integer">13</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Starost"/>
+        <rdfs:comment>Decije doba - osoba je decijeg doba ukoliko je broj godina manji ili jednak 13</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Deda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Deda">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Otac"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Roditelj"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Deda - Roditelji oca ili majke</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dete">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:comment>Dete - potomak od majke i oca (roditelja)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dever -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dever">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Brat"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBrata"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Dever je muževljev brat</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jetrva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jetrva">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Snaja"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dever"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Snaja"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dever"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Jetrva je žena muževljevog brata</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Maceha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Maceha">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPastorka"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPastorku"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak"/>
+        <rdfs:comment>Maćeha - Očeva žena koja nije biološka majka</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Majka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Majka">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Roditelj"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Majka - Ženski roditelj deteta (biološka majka)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#MladalackoDoba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#MladalackoDoba">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="&xsd;integer">20</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">32</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Starost"/>
+        <rdfs:comment>Mladalacko doba - osoba je mladalackog doba ukoliko joj je broj godina u rasponu od 20-32</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Muskarac - osoba muskog pola</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ocuh -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ocuh">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPastorka"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaPastorku"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak"/>
+        <rdfs:comment>Očuh - Muž majke koji nije biološki otac</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeStarosti"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Starost"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                <owl:someValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Predstavlja osobu u generalnom - muskarca ili zenu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Otac -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Otac">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Roditelj"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Otac - Muški roditelj deteta (biološki otac)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ozenjen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ozenjen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus"/>
+        <rdfs:comment>Ozenjen muskarac - muskarac koji je u braku</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pasenog -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pasenog">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zet"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svastika"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak"/>
+        <rdfs:comment>Pašenog muž ženine sestre</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pastorak -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pastorak">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sin"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Maceha"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ocuh"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Sin očuhove žene ili maćehinog muža iz prethodnog braka ili veze</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pastorka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pastorka">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Cerka"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Maceha"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ocuh"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Kćerka očuhove žene ili maćehinog muža iz prethodnog braka ili veze</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pol">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Predstavlja pol osobe - moze biti samo muski ili zenski (disjunktne klase)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Polubrat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Polubrat">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMacehu"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaOcuha"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak"/>
+        <rdfs:comment>Polubrat – brat drugoj deci samo po ocu ili po majci</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Polusestra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Polusestra">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMacehu"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaOcuha"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak"/>
+        <rdfs:comment>Polusestra – sestra drugoj deci samo po ocu ili po majci</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Prababa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Prababa">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Baba"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Baba"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Deda"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Prababa - Roditelj deda i baba</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pradeda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pradeda">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Deda"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Baba"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Deda"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Pradeda - Roditelj deda i baba</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Praunuk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Praunuk">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuk"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuk"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuka"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Praunuk - Unukov ili unukin sin</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Praunuka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Praunuka">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuka"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuk"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuka"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Praunuka - Unukova ili unukina kderka</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Prija -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Prija">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Majka"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBrakuSa"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Prija je majka kderkinog muža ili sinove supruge</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Prijatelj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Prijatelj">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Otac"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBrakuSa"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Prijatelj je otac kderkinog muža ili sinove supruge</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Razveden -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Razveden">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBivsuZenu"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojBivshihBrakova"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">1</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus"/>
+        <rdfs:comment>Razveden muskarac - muskarac koji je imao jednu ili vise zena i koji nije u braku</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Razvedena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Razvedena">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBivsegMuza"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojBivshihBrakova"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">1</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus"/>
+        <rdfs:comment>Razvedena zena - zena koja je imala jednog ili vise muzeva i koja nije u braku</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <rdfs:comment>Rodbina - osobe koje su u nekoj rodbinskoj vezi</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Roditelj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Roditelj">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaDete"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Roditelji deteta, dve osobe različitog pola (otac i majka), koji dobijaju potomke – decu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Rodjak - osoba koja nije u krvnom srodstvu, ali je rodbina</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Samac -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Samac">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojBivshihBrakova"/>
+                        <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBraku"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus"/>
+        <rdfs:comment>Samac - muskarac koji nije ozenjen i nije imao ni jednu zenu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Samica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Samica">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojBivshihBrakova"/>
+                        <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#uBraku"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus"/>
+        <rdfs:comment>Samica - zena koja nije udata i nije imala ni jednog muza</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sestra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sestra">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sibling"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Sestra – Kdi istih roditelja u odnosu na drugu decu tih roditelja</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sibling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sibling">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#hasSibling"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Sibling - predstavlja bracu i sestre od istih roditelja
+Napomena: upotrebljena je engleska rec, zato sto u srpskom jeziku ne postoji korektan jednorecni prevod ove engleske reci</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sin">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dete"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Muskarac"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Sin - Muško dete roditelja</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Snaja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Snaja">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Brat"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sin"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuk"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Snaja je sinovljeva, unukova ili bratova žena</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#SrednjeDoba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#SrednjeDoba">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="&xsd;integer">32</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">65</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Starost"/>
+        <rdfs:comment>Srednje doba - osoba je srednjeg doba ukoliko joj je broj godina u rasponu od 32-65</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#StarijeDoba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#StarijeDoba">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="&xsd;integer">65</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Starost"/>
+        <rdfs:comment>Starije doba - osoba je starijeg doba ukoliko joj je broj godina veci od 65</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Starost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Starost">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#DecijeDoba"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#MladalackoDoba"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#SrednjeDoba"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#StarijeDoba"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#TinejdzerskoDoba"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Starost - predstavlja kog je osoba doba. Moze biti decijeg, ladalackog, tinejdzerskog, srednjeg i starijeg (disjunktne klase)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Stric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Stric">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Brat"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBrata"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Otac"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Stric je očev brat</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Strina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Strina">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Snaja"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Stric"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak"/>
+        <rdfs:comment>Strina je supruga očevog brata - nije u krvnom srodstvu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Surak -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Surak">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Brat"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSestru"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Šurak je ženin brat</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Surnjaja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Surnjaja">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Snaja"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Surak"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak"/>
+        <rdfs:comment>Šurnjaja je žena ženinog brata</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svastic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svastic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sin"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMajku"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svastika"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Svastić - sin  ženine sestre</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svasticina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svasticina">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Cerka"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMajku"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svastika"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Svastičina - derka ženine sestre</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svastika -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svastika">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sestra"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSestru"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Svastika je ženina sestra</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svekar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svekar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Otac"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSina"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Svekar je muževljev otac</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svekrva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Svekrva">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Majka"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSina"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Svekrva je muževljeva majka</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Tast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Tast">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Otac"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaKcer"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Tast je ženini otac</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Tasta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Tasta">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Majka"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaKcer"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Tašta je ženina majka</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Teca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Teca">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zet"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Tetka"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodjak"/>
+        <rdfs:comment>Teča je tetkin muž - nije u krvnom srodstvu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Tetka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Tetka">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sestra"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBrata"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Roditelj"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSestru"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Roditelj"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Tetka je očeva ili majčina sestra</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#TinejdzerskoDoba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#TinejdzerskoDoba">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="&xsd;integer">13</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojGodina"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">20</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Starost"/>
+        <rdfs:comment>Tinejdzersko doba - osoba je tinejdzerskog doba ukoliko joj je broj godina u rasponu od 13-20</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Udata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Udata">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus"/>
+        <rdfs:comment>Udata zena - zena koja je u braku </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Udovac -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Udovac">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojBivshihBrakova"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">1</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus"/>
+        <rdfs:comment>Udovac - muskarac koji nije u braku i ima zenu koja je preminula</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Udovica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Udovica">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#brojBivshihBrakova"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">1</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jeZiv"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#BracniStatus"/>
+        <rdfs:comment>Udovica - zena koji nije u braku i ima muza koji je preminuo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ujak -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ujak">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Brat"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaSestru"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Majka"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Ujak je majčin brat</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ujna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ujna">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Snaja"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaMuza"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Ujak"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Ujna je ujakova žena - nije u krvnom srodstvu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuk">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sin"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dete"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Unuk - Sinovljev ili kderin sin</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Unuka">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Cerka"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaRoditelja"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dete"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Unuka - Sinovljeva ili kderina kderka</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zaova -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zaova">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sestra"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaBrata"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Zaova je muževljeva sestra</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zena">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Zena - osoba zenskog pola</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Cerka"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#imaZenu"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sestra"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#jePola"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Rodbina"/>
+        <rdfs:comment>Zet je derkin ili sestrin muž</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Biljana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Biljana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">20</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <imaMajku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana"/>
+        <imaOca rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jovan"/>
+        <imaBrata rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan"/>
+        <imaBrata rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Voja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Boris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Boris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">55</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">false</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <imaKcer rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Julija"/>
+        <imaZenu rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Keka"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+        <imaKcer rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Natalija"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Danica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Danica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">1</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">82</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">false</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <imaKcer rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana"/>
+        <imaKcer rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jasminka"/>
+        <imaBivsegMuza rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vojislav"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Danijela -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Danijela">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">38</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">true</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <imaMuza rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Mitko"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">52</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">true</uBraku>
+        <imaKcer rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Biljana"/>
+        <imaMajku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Danica"/>
+        <imaSestru rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jasminka"/>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan"/>
+        <imaMacehu rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milena"/>
+        <imaPolubrata rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Nemanja"/>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Voja"/>
+        <imaOca rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vojislav"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jasminka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jasminka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">50</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <imaMajku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Danica"/>
+        <hasSibling rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana"/>
+        <imaSestru rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana"/>
+        <imaMacehu rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milena"/>
+        <imaPolubrata rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Nemanja"/>
+        <imaOca rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vojislav"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jovan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jovan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">55</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">true</uBraku>
+        <imaKcer rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Biljana"/>
+        <imaZenu rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana"/>
+        <imaSestru rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Keka"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan"/>
+        <imaOca rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan_"/>
+        <imaMajku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vaskresija"/>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Voja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Julija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Julija">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">18</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <imaOca rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Boris"/>
+        <imaMajku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Keka"/>
+        <imaSestru rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Natalija"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Keka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Keka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">1</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">50</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <hasSibling rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jovan"/>
+        <imaBrata rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jovan"/>
+        <imaOca rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan_"/>
+        <imaMajku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vaskresija"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Make -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Make">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">64</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">true</uBraku>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Mitko"/>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vlatko"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">23</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <hasSibling rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Biljana"/>
+        <imaSestru rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Biljana"/>
+        <imaMajku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana"/>
+        <imaOca rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jovan"/>
+        <imaBrata rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Voja"/>
+        <hasSibling rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Voja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan_ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan_">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">82</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">false</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jovan"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+        <imaZenu rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vaskresija"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">1</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">62</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <imaPastorku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana"/>
+        <imaPastorku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jasminka"/>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Nemanja"/>
+        <imaBivsegMuza rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vojislav"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Mitko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Mitko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">39</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">true</uBraku>
+        <imaBrata rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vlatko"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Natalija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Natalija">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">14</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <hasSibling rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Julija"/>
+        <imaSestru rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Julija"/>
+        <imaMajku rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Keka"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Nemanja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Nemanja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">31</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <imaPolusestru rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana"/>
+        <imaPolusestru rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jasminka"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sneze -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Sneze">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">31</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">true</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <imaMuza rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vlatko"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vaskresija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vaskresija">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">1</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">82</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jovan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vlatko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vlatko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">41</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">true</uBraku>
+        <hasSibling rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Mitko"/>
+        <imaBrata rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Mitko"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Voja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Voja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">21</brojGodina>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <imaSestru rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Biljana"/>
+        <imaOca rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jovan"/>
+        <imaBrata rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Milan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vojislav -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vojislav">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">2</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">82</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">false</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">false</uBraku>
+        <imaKcer rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Dragana"/>
+        <imaKcer rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Jasminka"/>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Nemanja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Z">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Pol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zivko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Zivko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Osoba"/>
+        <brojBivshihBrakova rdf:datatype="&xsd;nonNegativeInteger">0</brojBivshihBrakova>
+        <brojGodina rdf:datatype="&xsd;nonNegativeInteger">64</brojGodina>
+        <jeZiv rdf:datatype="&xsd;boolean">true</jeZiv>
+        <uBraku rdf:datatype="&xsd;boolean">true</uBraku>
+        <jePola rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#M"/>
+        <imaZenu rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Make"/>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Mitko"/>
+        <imaSina rdf:resource="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#Vlatko"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#DecijeDoba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#MladalackoDoba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#SrednjeDoba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#StarijeDoba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/OntologijaPorodicnihVeza.owl#TinejdzerskoDoba"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,33 @@
+if(
+	FINDSTRING( LOWER( [attack_type]  ) , "back", 1 ) || 
+	FINDSTRING( LOWER( [attack_type]  ) , "land", 1 ) == 0 ||
+	FINDSTRING( LOWER( [attack_type]  ) , "neptune", 1 ) == 0||
+	FINDSTRING( LOWER( [attack_type]  ) , "pod", 1 ) == 0|| 
+	FINDSTRING( LOWER( [attack_type]  ) , "smurf", 1 ) == 0||
+	FINDSTRING( LOWER( [attack_type]  ) , "teardrop", 1 ) == 0
+) then "dos";
+else if (
+FINDSTRING( LOWER( [attack_type]  ) , "buffer_overflow", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "loadmodule", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "perl", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "rootkit", 1 )== 0
+) then "u2r";
+else if(
+FINDSTRING( LOWER( [attack_type]  ) , "ftp_write", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "guess_passwd", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "imap", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "multihop", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "phf", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "spy", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "warezclient", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "warezmaster", 1 ) == 0
+) then "r2l";
+else if(
+FINDSTRING( LOWER( [attack_type]  ) , "ipsweep", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "nmap", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "portsweep", 1 ) == 0 ||
+FINDSTRING( LOWER( [attack_type]  ) , "satan", 1 ) == 0
+) then "probe";
+else if(
+FINDSTRING( LOWER( [attack_type]  ) , "normal", 0 ) == 0
+) then "other";
